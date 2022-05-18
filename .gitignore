@@ -1,0 +1,14 @@
+node_modules
+.env
+
+#Hardhat files
+cache
+artifacts
+typechain
+
+postgres
+
+.vscode
+**/.DS_Store
+coverage.json
+coverage
