@@ -8,14 +8,11 @@
 
 #### parameters
 
-    - `_usdc`:
-    address of USDC
+- `_usdc`: address of USDC
 
-    - `_usdt`:
-    address of USDT
+- `_usdt`: address of USDT
 
-    - `_diaOracle`:
-    address of DIAOracleV2 contract
+- `_diaOracle`: address of DIAOracleV2 contract
 
 ### `_buyToken(uint256 _projectId, uint256 _buyAmount, address _payTokenAddress, uint256 _payAmount)` (internal)
 
@@ -23,17 +20,13 @@ update states and events upon buying
 
 #### parameters
 
-    - `_projectId`:
-    project index of projects
+- `_projectId`: project index of projects
 
-    - `_buyAmount`:
-    amount of IDO project token to be bought
+- `_buyAmount`: amount of IDO project token to be bought
 
-    - `_payTokenAddress`:
-    address of USDC, USDT or ASTR(0x0)
+- `_payTokenAddress`: address of USDC, USDT or ASTR(0x0)
 
-    - `_payAmount`:
-    amount to be paid in USDC, USDT or ASTR
+- `_payAmount`: amount to be paid in USDC, USDT or ASTR
 
 ### `getUsersCommittedTokenAmounts(uint256 projectId, address userAddress) → struct ArthswapIDO.CommittedToken[3]` (external)
 
@@ -41,11 +34,9 @@ get amounts of tokens user commit
 
 #### parameters
 
-    - `projectId`:
-    project index of projects
+- `projectId`: project index of projects
 
-    - `userAddress`:
-    user address
+- `userAddress`: user address
 
 ### `buyWithUsd(uint256 projectId, contract IERC20 usdToken, uint256 buyAmountMax)` (external)
 
@@ -53,14 +44,11 @@ buy IDO token with USDC, USDT
 
 #### parameters
 
-    - `projectId`:
-    project index of projects
+- `projectId`: project index of projects
 
-    - `usdToken`:
-    address of USDC or USDT
+- `usdToken`: address of USDC or USDT
 
-    - `buyAmountMax`:
-    amount of buying IDO token
+- `buyAmountMax`: amount of buying IDO token
 
 ### `buyWithAstar(uint256 projectId, uint256 buyAmountMax)` (external)
 
@@ -68,11 +56,9 @@ buy IDO token with Astar, set msg.value > payment
 
 #### parameters
 
-    - `projectId`:
-    project index of projects
+- `projectId`: project index of projects
 
-    - `buyAmountMax`:
-    amount of buying IDO token
+- `buyAmountMax`: amount of buying IDO token
 
 ### `getAstarPriceE8() → uint256` (public)
 
@@ -92,11 +78,9 @@ get amount of IDO token user bought
 
 #### parameters
 
-    - `projectId`:
-    project index of projects
+- `projectId`: project index of projects
 
-    - `userAddress`:
-    user address
+- `userAddress`: user address
 
 ### `getProjects() → struct ArthswapIDO.Project[]` (external)
 
@@ -114,29 +98,21 @@ register IDO projects
 
 #### parameters
 
-    - `name`:
-    project name
+- `name`: project name
 
-    - `startTimestamp`:
-    IDO starting timestamp
+- `startTimestamp`: IDO starting timestamp
 
-    - `endTimestamp`:
-    IDO ending timestamp
+- `endTimestamp`: IDO ending timestamp
 
-    - `tokenDecimals`:
-    decimals of the IDO token
+- `tokenDecimals`: decimals of the IDO token
 
-    - `maxAllocateAmount`:
-    max amount of IDO token for the allocation
+- `maxAllocateAmount`: max amount of IDO token for the allocation
 
-    - `usdPricePerTokenE6`:
-    USD price per IDO token
+- `usdPricePerTokenE6`: USD price per IDO token
 
-    - `astarPriceDiscountMultiplierE4`:
-    discount rate for buying with Astar, if 5% discount => it will be 9500
+- `astarPriceDiscountMultiplierE4`: discount rate for buying with Astar, if 5% discount => it will be 9500
 
-    - `fundsAddress`:
-    project owned address which raised tokens(USDC, USDT, Astar) will transfer to
+- `fundsAddress`: project owned address which raised tokens(USDC, USDT, Astar) will transfer to
 
 ### `ProjectAdded(uint256 projectId, string name, uint256 startTimestamp, uint256 endTimestamp, uint256 tokenDecimals, uint256 maxAllocateAmount, uint256 usdPricePerTokenE6, uint256 astarPriceDiscountMultiplierE4, address fundsAddress)`
 
